@@ -1,7 +1,7 @@
 import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
 
-@Entity()
+@Entity('p_workspaces')
 export class Workspace {
   @PrimaryGeneratedColumn('increment')
   id: number;
@@ -21,6 +21,7 @@ export class Workspace {
   @Column({ default: true })
   isvalid: boolean;
 
+  @Column()
   @OneToOne(() => User, (User) => User.id)
   created_by: number;
 }

@@ -18,6 +18,7 @@ export class WorkspacesService {
       name: createWorkspaceDto.name,
       description: createWorkspaceDto.description,
       createdat: new Date(),
+      created_by: parseInt(createWorkspaceDto.created_by),
     });
   }
 

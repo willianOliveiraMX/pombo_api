@@ -79,7 +79,7 @@ describe('WorkspacesController', () => {
     expect(
       await controller.create({
         name: mockName,
-        createdat: '',
+        created_by: '1',
         description: '',
       }),
     ).toEqual(mockCreatedUser);

@@ -9,5 +9,5 @@ export class CreateWorkspaceDto {
   description: string;
 
   @IsString()
-  createdat: string;
+  created_by: string;
 }
