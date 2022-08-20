@@ -8,6 +8,8 @@ import dataBaseConfig from './config/database.config';
 import { Workspace } from './workspaces/entities/workspace.entity';
 import { PlatformsModule } from './platforms/platforms.module';
 import { Platform } from './platforms/entities/platform.entity';
+import { ContactsModule } from './contacts/contacts.module';
+import { Contact } from './contacts/entities/contact.entity';
 
 dotenv.config();
 
@@ -15,11 +17,12 @@ dotenv.config();
   imports: [
     TypeOrmModule.forRoot({
       ...dataBaseConfig,
-      entities: [User, Workspace, Platform],
+      entities: [User, Workspace, Platform, Contact],
     }),
     UsersModule,
     WorkspacesModule,
     PlatformsModule,
+    ContactsModule,
   ],
 })
 export class AppModule {}
